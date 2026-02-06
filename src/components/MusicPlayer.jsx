@@ -2,20 +2,18 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Music, VolumeX, Volume2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const MusicPlayer = () => {
-    const [isPlaying, setIsPlaying] = useState(false);
+const MusicPlayer = ({ isPlaying, onToggle }) => {
     const audioRef = useRef(null);
 
-    const togglePlay = () => {
+    useEffect(() => {
         if (audioRef.current) {
             if (isPlaying) {
-                audioRef.current.pause();
-            } else {
                 audioRef.current.play().catch(e => console.log("Audio play failed:", e));
+            } else {
+                audioRef.current.pause();
             }
-            setIsPlaying(!isPlaying);
         }
-    };
+    }, [isPlaying]);
 
     return (
         <motion.div
@@ -28,16 +26,16 @@ const MusicPlayer = () => {
                 zIndex: 50,
             }}
         >
-            <audio ref={audioRef} loop src="/music/bg-music.mp3" /> {/* User needs to add file */}
+            <audio ref={audioRef} loop src="/mayanadhi_bgm.mp3" /> {/* Specific song request */}
 
             <button
-                onClick={togglePlay}
+                onClick={onToggle}
                 style={{
                     background: 'rgba(255, 255, 255, 0.8)',
                     border: '1px solid var(--color-primary)',
                     borderRadius: '50%',
                     width: '30px',
-                    height: '30px', /* small subtle button */
+                    height: '30px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',

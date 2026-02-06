@@ -8,8 +8,14 @@ import ProposalSlide from './slides/ProposalSlide';
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMusicPlaying, setIsMusicPlaying] = useState(false);
 
-  const nextSlide = () => setCurrentSlide((prev) => prev + 1);
+  const nextSlide = () => {
+    if (currentSlide === 0) {
+      setIsMusicPlaying(true); // Auto-play music after opening slide
+    }
+    setCurrentSlide((prev) => prev + 1);
+  };
 
   const slides = [
     <OpeningSlide onNext={nextSlide} />,
@@ -20,7 +26,7 @@ function App() {
   return (
     <div className="app-container" style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden' }}>
       <Background />
-      <MusicPlayer />
+      <MusicPlayer isPlaying={isMusicPlaying} onToggle={() => setIsMusicPlaying(!isMusicPlaying)} />
 
       <AnimatePresence mode='wait'>
         <motion.div

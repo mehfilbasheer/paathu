@@ -69,7 +69,9 @@ const ProposalSlide = () => {
             </motion.h3>
             <motion.p style={{ fontSize: '1.2rem', marginBottom: '3rem', lineHeight: 1.6 }}>
                 Every story feels incomplete without an ending.<br />
-                And every ending feels wrong without you.
+                And every ending feels wrong without you. Ith van cringe aanenn inik aryaam but , oru rasam ...
+                <br />
+                nee thanne parayaarund, oru yes cannot change anything, but ... sometimes this yes is means a lot dear
             </motion.p>
 
             <motion.div
