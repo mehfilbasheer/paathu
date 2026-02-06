@@ -281,9 +281,7 @@ const StorySlide = ({ onNext }) => {
                 <p style={{ fontSize: '1.2rem', marginBottom: '3rem', lineHeight: 1.6, textAlign: 'center', color: 'var(--color-text-main)' }}>
                     onnich ulla pics athikam llaathond adjust with this now
                 </p>
-                <p style={{ fontSize: '1.2rem', marginBottom: '3rem', lineHeight: 1.6 }}>
-                    onnich ulla pics athikam llaathond adjust with this now
-                </p>
+
 
                 <div style={{
                     display: 'flex',

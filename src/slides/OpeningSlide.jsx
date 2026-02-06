@@ -91,10 +91,15 @@ const OpeningSlide = ({ onNext }) => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.5, duration: 1 }}
             >
-                It’s been 3 beautiful years since you walked into my life.<br />
-                Through every smile, every silence, every small moment —<br />
-                you were there.<br />
+                Three years ago, you walked into my life,.<br />
+                and somehow, everything began to feel lighter.<br />
+                Through smiles, silences, and moments I never spoke about,
+                you stayed.<br />
                 This is just a small way to say… <strong>thank you for being you.</strong>
+                <br /><br />
+                <span style={{ fontSize: '1rem', fontStyle: 'italic', opacity: 0.8 }}>
+                    enik aryaam ne ithoke cringe aanenn paraymnn, but kaanumbo onn chirikkenkilum cheyyum enn pratheekshikkunnu,
+                </span>
             </motion.p>
 
             <motion.button
